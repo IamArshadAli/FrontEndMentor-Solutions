@@ -57,7 +57,7 @@ const App = () => {
   }
 
   //* Identify Card Type
-  const checkCardType = (e) => {
+  const handleCardNumber = (e) => {
     var cardNumber = e.target.value;
     cardNumber = cleanNumber(cardNumber);
 
@@ -69,6 +69,8 @@ const App = () => {
     else if (visaCardRegex.test(cardNumber)) setCardType("visa");
     else if (americanExpCardRegex.test(cardNumber)) setCardType("amex");
     else setCardType("");
+
+    setFormData({...formData, [e.target.name]: e.target.value});
   };
 
   // Handle Error Messages
@@ -144,6 +146,7 @@ const App = () => {
     setSuccess(false);
     setError({});
     setFormData(initialState);
+    setCardType("");
   };
 
   return (
@@ -158,7 +161,7 @@ const App = () => {
           handleInput={handleInput}
           formData={formData}
           error={error}
-          checkCardType={checkCardType}
+          handleCardNumber={handleCardNumber}
         />
       ) : (
         <ThankYou handleDismiss={handleDismiss} />

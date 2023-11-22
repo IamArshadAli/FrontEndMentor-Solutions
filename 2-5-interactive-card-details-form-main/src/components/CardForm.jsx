@@ -3,7 +3,7 @@ const CardForm = ({
   onSubmit,
   formData,
   handleInput,
-  checkCardType,
+  handleCardNumber,
   error,
 }) => {
   return (
@@ -36,8 +36,7 @@ const CardForm = ({
             .replace(/\s/g, "")
             .replace(/(\d{4})/g, "$1 ")
             .trim()}
-          onChange={handleInput}
-          onKeyUp={checkCardType}
+          onChange={handleCardNumber}
           minLength={16}
           maxLength={19}
           className={`form__input input--full-width ${
