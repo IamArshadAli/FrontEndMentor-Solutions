@@ -13,10 +13,11 @@
 @layer components {
 
   .main {
-    @apply w-screen max-h-screen bg-hero-mobile lg:bg-hero-desktop bg-no-repeat main--bg-size font-SpaceGrotesk flex flex-col lg:flex-row gap-6 overflow-hidden
+    @apply w-screen max-h-screen bg-no-repeat main--bg-size font-SpaceGrotesk flex flex-col lg:flex-row gap-6 overflow-hidden
   }
 
   .main--bg-size {
+    background: url("./assets/images/bg-main-mobile.png") no-repeat;
     background-size: 100% 240px;
   }
 
@@ -28,6 +29,7 @@
 
   @media screen and (min-width: 1024px) {
     .main--bg-size {
+      background: url("./assets/images/bg-main-desktop.png") no-repeat;
       background-size: 33.55% 100%;
     }
   }
@@ -41,7 +43,11 @@
   }
 
   .aside__card-front {
-    @apply bg-card-front bg-no-repeat credit-card p-7 flex flex-col justify-between -mb-[20.85rem] -ml-10 lg:mb-0 lg:ml-8 z-10
+    @apply card-front--bg bg-no-repeat credit-card p-7 flex flex-col justify-between -mb-[20.85rem] -ml-10 lg:mb-0 lg:ml-8 z-10
+  }
+
+  .card-front--bg {
+    background: url("./assets/images/bg-card-front.png") no-repeat;
   }
 
   .card-front__type {
@@ -73,7 +79,11 @@
   }
 
   .aside__card-back {
-    @apply bg-card-back bg-no-repeat credit-card -mr-10 lg:-mr-56 lg:mt-10 z-0 flex justify-end items-center
+    @apply card-back--bg bg-no-repeat credit-card -mr-10 lg:-mr-56 lg:mt-10 z-0 flex justify-end items-center
+  }
+
+  .card-back--bg {
+    background: url('./assets/images/bg-card-back.png') no-repeat;
   }
 
   .card-back__cvc {
