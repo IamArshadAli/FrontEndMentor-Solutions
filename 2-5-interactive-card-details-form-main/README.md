@@ -34,6 +34,9 @@
 
   <a href="https://front-end-mentor-solutions-eight.vercel.app/">
     <img src="https://img.shields.io/badge/Live_Demo->-9757f1?style=for-the-badge" alt="Live Demo">
+  </a> &nbsp;
+  <a href="https://github.com/IamArshadAli/FrontEndMentor-Solutions/tree/main/2-5-interactive-card-details-form-main/">
+    <img src="https://img.shields.io/badge/Solution->-9757f1?style=for-the-badge" alt="Solution">
   </a>
 
 </div>
@@ -49,6 +52,23 @@
 This is a solution to the [Interactive Card Details Form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 <br />
+
+## Pagespeed Insights Score:
+
+<div align="center">
+
+ ||
+  | :-----: |
+  |  <b>Overall Score: 🖥️ 99% \| 📱 95%</b> |
+  | |
+  | <img src='./src/assets/images/pagespeed-insights-score.svg' alt='Scoreboard'> |
+  | |
+  | Check out [**Pagespeed Insights**](https://pagespeed.web.dev/analysis/https-front-end-mentor-solutions-eight-vercel-app/75co3mk81h?form_factor=desktop) to get live score |
+  ||
+
+</div>
+
+<br>
 
 ## ⚔️ The Challenge
 
@@ -97,6 +117,20 @@ Your users should be able to:
 
 <br />
 
+## 🪴 Acknowledgements
+
+<div style="display:flex; gap: 10px;">
+
+  <p>Took some design refrence from</p>
+  <a href="https://www.frontendmentor.io/solutions/interactive-card-details-form-html-css-js-vanilla-O7P-nUEw1Q">
+    <img src="https://img.shields.io/badge/Cheosphere-1572B6?style=for-the-badge&logo=frontendmentor&logoColor=white">
+  </a>
+  <p>(A guy having pixel perfect Solutions)</p>
+
+</div>
+
+<br />
+
 ## 👋 Say Hii... 👇
 
 <p align="center">
@@ -104,7 +138,7 @@ Your users should be able to:
     <img src="https://img.shields.io/badge/FrontendMentor-1572B6?style=for-the-badge&logo=frontendmentor&logoColor=white">
   </a> &nbsp;
   <a href="https://github.com/IAmArshadAli">
-    <img src="https://img.shields.io/badge/Github-9757e6?style=for-the-badge&logo=github&logoColor=white">
+    <img src="https://img.shields.io/badge/Github-2b2b2b?style=for-the-badge&logo=github&logoColor=white">
    </a> &nbsp;
   <a href="https://www.linkedin.com/in/arshadalikaldane">
     <img src="https://img.shields.io/badge/Linkedin-004182?style=for-the-badge&logo=linkedin&logoColor=white">
