@@ -13,6 +13,7 @@ const CardForm = ({
         <input
           type="text"
           name="cardHolder"
+          id="cardHolder"
           placeholder="e.g. Jane Appleseed"
           value={formData.cardHolder}
           onChange={handleInput}
@@ -29,6 +30,7 @@ const CardForm = ({
         <input
           type="text"
           name="cardNumber"
+          id="cardNumber"
           placeholder="e.g 1234 5678 9123 0000"
           value={formData.cardNumber
             .replace(/\s/g, "")
@@ -50,6 +52,7 @@ const CardForm = ({
           <input
             type="text"
             name="expMonth"
+            id="expMonth"
             placeholder="MM"
             value={formData.expMonth}
             onChange={handleInput}
@@ -62,6 +65,7 @@ const CardForm = ({
           <input
             type="text"
             name="expYear"
+            id="expYear"
             placeholder="YY"
             value={formData.expYear}
             onChange={handleInput}
@@ -78,6 +82,7 @@ const CardForm = ({
           <input
             type="text"
             name="cvc"
+            id="cvc"
             placeholder="e.g 123"
             value={formData.cvc}
             onChange={handleInput}
