@@ -7,19 +7,10 @@ const App = () => {
 
   useEffect(() => {
     const getData = async () => {
-      await fetch("data.json", {
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-      })
+      await fetch("/data.json")
         .then((response) => response.json())
         .then((data) => {
           setData(data);
-          // data.forEach((item) => {
-          //   console.log(item.day,item.amount);
-          // });
-          // console.log(data.reduce((acc, item) => acc+item.amount,0))
         })
         .catch((err) => console.log(err));
     };
