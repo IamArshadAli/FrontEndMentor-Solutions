@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
-
 import { useState } from "react";
 
 const Card = ({ data }) => {
   const [hoverIndex, setHoverIndex] = useState(-1);
+  const [todayHovered, setTodayHovered] = useState(false);
 
   const DAY = {
     mon: 1,
@@ -15,18 +15,27 @@ const Card = ({ data }) => {
     sun: 7,
   };
 
+  const handleMouseOver = (index, isCurrentDay) => {
+    setHoverIndex(index);
+    isCurrentDay && setTodayHovered(true);
+  };
+
+  const handleMouseLeave = (isCurrentDay) => {
+    setHoverIndex(-1);
+    isCurrentDay && setTodayHovered(false);
+  };
+
   function pxToRem(px, base = 16) {
     return px / base;
   }
 
   function convertToRem(number) {
     const numToPx = number * 2; // as I've used height of parent container as 12.5rem ~ 200px
-    //* note: here values > 100 are not considered for now
     return pxToRem(numToPx);
   }
 
   return (
-    <div className="bg-VeryPaleOrange flex w-[22rem] flex-col gap-4 rounded-xl p-6 md:w-96 md:rounded-2xl md:p-8">
+    <div className="bg-VeryPaleOrange flex w-[22rem] flex-col gap-5 rounded-xl p-6 md:w-96 md:rounded-2xl md:p-8">
       <h1 className="text-DarkBrown text-2xl font-bold">
         Spending - Last 7 days
       </h1>
@@ -35,17 +44,21 @@ const Card = ({ data }) => {
       <div className="flex max-h-[12.5rem] min-h-[9rem] items-end justify-between">
         {data.map((item, index) => {
           let height = `h-[${convertToRem(item.amount)}rem]`;
-          let today = new Date().getUTCDay()-1;
+          let today = new Date().getUTCDay() - 1;
           let isCurrentDay = DAY[item.day] === today;
           return (
             <div key={index} className="text-center">
               <div
-                className={`bg-SoftRed relative ${height} w-8 cursor-pointer rounded-sm hover:bg-opacity-50`}
-                style={{ height: `${convertToRem(item.amount)}rem`, backgroundColor: isCurrentDay && "hsl(186, 34%, 60%)" }}
-                onMouseOver={() => {
-                  setHoverIndex(index);
+                className={`bg-SoftRed relative ${height} max-h-40 w-8 cursor-pointer rounded-sm transition hover:bg-opacity-50`}
+                style={{
+                  height: `${convertToRem(item.amount)}rem`,
+                  backgroundColor:
+                    isCurrentDay && todayHovered
+                      ? "hsla(186, 34%, 60%,.5)"
+                      : isCurrentDay && "hsl(186, 34%, 60%)",
                 }}
-                onMouseLeave={() => setHoverIndex(-1)}
+                onMouseOver={() => handleMouseOver(index, isCurrentDay)}
+                onMouseLeave={() => handleMouseLeave(isCurrentDay)}
               >
                 {hoverIndex === index && (
                   <span className="text-VeryPaleOrange bg-DarkBrown absolute -top-[2.15rem] -translate-x-1/2 rounded-sm p-1 text-sm">
