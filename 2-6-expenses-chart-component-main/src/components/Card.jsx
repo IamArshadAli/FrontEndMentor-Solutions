@@ -42,7 +42,7 @@ const Card = ({ data }) => {
 
       {/* BAR CHART */}
       <div className="flex max-h-[12.5rem] min-h-[9rem] items-end justify-between">
-        {data.map((item, index) => {
+        {data?.map((item, index) => {
           let height = `h-[${convertToRem(item.amount)}rem]`;
           let today = new Date().getUTCDay() - 1;
           let isCurrentDay = DAY[item.day] === today;
