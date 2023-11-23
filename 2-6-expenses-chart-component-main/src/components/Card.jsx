@@ -5,12 +5,23 @@ import { useState } from "react";
 const Card = ({ data }) => {
   const [hoverIndex, setHoverIndex] = useState(-1);
 
+  const DAY = {
+    mon: 1,
+    tue: 2,
+    wed: 3,
+    thu: 4,
+    fri: 5,
+    sat: 6,
+    sun: 7,
+  };
+
   function pxToRem(px, base = 16) {
     return px / base;
   }
 
   function convertToRem(number) {
-    const numToPx = number * 2;
+    const numToPx = number * 2; // as I've used height of parent container as 12.5rem ~ 200px
+    //* note: here values > 100 are not considered for now
     return pxToRem(numToPx);
   }
 
@@ -21,13 +32,16 @@ const Card = ({ data }) => {
       </h1>
 
       {/* BAR CHART */}
-      <div className="flex h-[12.5rem] items-end justify-between">
+      <div className="flex max-h-[12.5rem] min-h-[9rem] items-end justify-between">
         {data.map((item, index) => {
           let height = `h-[${convertToRem(item.amount)}rem]`;
+          let today = new Date().getUTCDay()-1;
+          let isCurrentDay = DAY[item.day] === today;
           return (
             <div key={index} className="text-center">
               <div
                 className={`bg-SoftRed relative ${height} w-8 cursor-pointer rounded-sm hover:bg-opacity-50`}
+                style={{ height: `${convertToRem(item.amount)}rem`, backgroundColor: isCurrentDay && "hsl(186, 34%, 60%)" }}
                 onMouseOver={() => {
                   setHoverIndex(index);
                 }}
