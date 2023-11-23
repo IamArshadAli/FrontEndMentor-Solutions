@@ -59,11 +59,11 @@ This is a solution to the [Expenses Chart Component challenge on Frontend Mentor
 
  ||
   | :-----: |
-  |  <b>Overall Score: 🖥️ 99% \| 📱 95%</b> |
+  |  <b>Overall Score: 🖥️ 99% \| 📱 99%</b> |
   | |
   | <img src='./src/assets/images/pagespeed-insights-score.svg' alt='Scoreboard'> |
   | |
-  | Check out [**Pagespeed Insights**](https://pagespeed.web.dev/analysis/https-front-end-mentor-solutions-eight-vercel-app/75co3mk81h?form_factor=desktop) to get live score |
+  | Check out [**Pagespeed Insights**](https://pagespeed.web.dev/analysis/https-expenses-chart-component-arshad-ali-vercel-app/ygc3esl8nf?form_factor=desktop) to get live score |
   ||
 
 </div>
