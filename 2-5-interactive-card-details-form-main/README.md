@@ -7,7 +7,7 @@
 
   <h1 align="center">Interactive Card Details Form</h1>
   <p align="center">
-    <a href="https://www.frontendmentor.io/solutions/four-card-feature-section-tailwind-css-GujLxoYMHb"><strong>Frontend Mentor Challenge</strong></a>
+    <a href="https://www.frontendmentor.io/solutions/interactive-card-details-form-with-identifyting-card-types-S0jo2QQbGf"><strong>Frontend Mentor Challenge</strong></a>
     <br />
   </p>
 </div>
@@ -144,3 +144,7 @@ Your users should be able to:
     <img src="https://img.shields.io/badge/Linkedin-004182?style=for-the-badge&logo=linkedin&logoColor=white">
   </a>
 </p>
+
+<br />
+
+>Code Together &nbsp;&nbsp;|&nbsp;&nbsp; Learn Together &nbsp;&nbsp;|&nbsp;&nbsp; Grow Together
