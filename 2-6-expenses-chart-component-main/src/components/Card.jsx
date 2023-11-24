@@ -44,7 +44,7 @@ const Card = ({ data }) => {
       <div className="flex max-h-[12.5rem] min-h-[9rem] items-end justify-between">
         {data?.map((item, index) => {
           let height = `h-[${convertToRem(item.amount)}rem]`;
-          let today = new Date().getUTCDay() - 1;
+          let today = new Date().getUTCDay()-2;
           let isCurrentDay = DAY[item.day] === today;
           return (
             <div key={index} className="text-center">
