@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .container {
+        @apply mx-auto h-screen w-screen max-w-[100rem] bg-AlmostWhite font-Epilogue lg:max-h-screen
+    }
+
+    .nav {
+        @apply relative flex items-center justify-between px-4 py-6 text-sm text-MediumGray lg:px-8 lg:py-6
+    }
+
+    .nav__mobile {
+        @apply absolute right-0 top-0 z-20 h-screen w-[65vw] bg-AlmostWhite px-6 py-20
+    }
+
+    .nav__mobile--overlay {
+        @apply absolute left-0 top-0 z-10 h-screen w-screen bg-AlmostBlack bg-opacity-50
+    }
+
+    .nav__desktop {
+        @apply flex items-start space-x-12
+    }
+
+    .nav__list {
+        @apply flex flex-col gap-4 md:flex-row
+    }
+
+    .nav__link {
+        @apply ml-6 flex items-center space-x-3 md:ml-0
+    }
+
+    .nav__link--highlight {
+        @apply hover:text-AlmostBlack
+    }
+
+    .nav__auth {
+        @apply mt-6 flex flex-col items-center gap-2 md:mt-0 md:flex-row md:gap-8
+    }
+
+    .nav__auth--register {
+        @apply w-full rounded-xl border border-MediumGray px-4 py-2 text-center hover:border-AlmostBlack hover:text-AlmostBlack
+    }
+
+    .dropdown__toggle {
+        @apply flex cursor-pointer items-center space-x-2
+    }
+
+    .dropdown__list {
+        @apply my-4 flex min-w-max flex-col gap-4 bg-AlmostWhite md:absolute md:z-10 md:mt-0 md:rounded-xl md:p-4 md:shadow-2xl
+    }
+
+    .main {
+        @apply flex flex-col gap-6 lg:mt-6 lg:flex-row-reverse lg:gap-6 lg:px-32 xl:gap-16
+    }
+
+    .main__picture {
+        @apply lg:mr-0
+    }
+
+    .main__hero {
+        @apply max-w-full lg:max-w-md
+    }
+
+    .main__section {
+        @apply mt-6 flex flex-1 flex-col items-center justify-center gap-3 px-3 lg:items-start lg:justify-end lg:px-0
+    }
+
+    .section__title {
+        @apply mb-2 text-4xl font-bold lg:mb-8 lg:max-w-[30rem] lg:text-7xl
+    }
+
+    .section__description {
+        @apply text-center text-MediumGray lg:max-w-sm lg:text-left
+    }
+
+    .section__cta {
+        @apply my-4 rounded-xl bg-AlmostBlack px-4 py-2 text-AlmostWhite lg:my-8
+    }
+
+    .section__clients {
+        @apply my-6 flex w-full items-center justify-between gap-2 lg:mt-8 lg:justify-start lg:gap-8 lg:self-end
+    }
+
+    .clients__img {
+        @apply w-20 max-h-[2rem]
+    }
+}
