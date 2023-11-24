@@ -7,7 +7,7 @@
 
   <h1 align="center">Expenses Chart Component</h1>
   <p align="center">
-    <a href="https://www.frontendmentor.io/solutions/four-card-feature-section-tailwind-css-GujLxoYMHb"><strong>Frontend Mentor Challenge</strong></a>
+    <a href="https://www.frontendmentor.io/solutions/dynamic-expenses-chart-component-using-reactjs-and-tailwindcss-wOp4uhodH_"><strong>Frontend Mentor Challenge</strong></a>
     <br />
   </p>
 </div>
@@ -108,9 +108,4 @@ Your users should be able to:
 
 <br />
 
-<blockquote style="text-align:center; border-left: 5px solid hsl(186, 34%, 60%);">
-<br>
-Code Together &nbsp;&nbsp;|&nbsp;&nbsp; Learn Together &nbsp;&nbsp;| &nbsp;&nbsp;Grow Together
-<br>
-<br>
-</blockquote>
+>Code Together &nbsp;&nbsp;|&nbsp;&nbsp; Learn Together &nbsp;&nbsp;| &nbsp;&nbsp;Grow Together
